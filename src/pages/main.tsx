@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import Spline from "@splinetool/react-spline";
 
 const MainStyled = styled.div`
     width: 100vw;
@@ -8,7 +9,11 @@ const MainStyled = styled.div`
 `;
 
 function Main() {
-    return <MainStyled>오 안녕하세요</MainStyled>;
+    return (
+        <MainStyled>
+            <Spline scene="https://prod.spline.design/cjPqvkp7Xk0MTifU/scene.splinecode" />
+        </MainStyled>
+    );
 }
 
 export { Main as default };
