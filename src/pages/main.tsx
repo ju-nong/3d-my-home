@@ -1,18 +1,24 @@
 import styled from "@emotion/styled";
 import Spline from "@splinetool/react-spline";
-
-const MainStyled = styled.div`
-    width: 100vw;
-    height: 100vh;
-
-    position: relative;
-`;
+import { Container, Menu, Loader } from "../components";
+import { useState } from "react";
 
 function Main() {
+    const [loaded, setLoaded] = useState(false);
+
+    function handleLoad() {
+        setLoaded(true);
+    }
+
     return (
-        <MainStyled>
-            <Spline scene="https://prod.spline.design/cjPqvkp7Xk0MTifU/scene.splinecode" />
-        </MainStyled>
+        <Container>
+            <Menu />
+            {loaded ? null : <Loader />}
+            <Spline
+                scene="https://prod.spline.design/cjPqvkp7Xk0MTifU/scene.splinecode"
+                onLoad={handleLoad}
+            />
+        </Container>
     );
 }
 
