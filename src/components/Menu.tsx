@@ -24,8 +24,8 @@ const MenuContainer = styled.header`
 function Menu() {
     return (
         <MenuContainer>
-            <Link to={"/"}>My Home</Link>
-            <Link to={"/tutorial"}>Tutorial Home</Link>
+            {/* <Link to={"/"}>My Home</Link>
+            <Link to={"/tutorial"}>Tutorial Home</Link> */}
         </MenuContainer>
     );
 }

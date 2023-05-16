@@ -1,4 +1,3 @@
-import styled from "@emotion/styled";
 import Spline from "@splinetool/react-spline";
 import { Container, Menu, Loader } from "../components";
 import { useState } from "react";
@@ -15,7 +14,7 @@ function Main() {
             <Menu />
             {loaded ? null : <Loader />}
             <Spline
-                scene="https://prod.spline.design/cjPqvkp7Xk0MTifU/scene.splinecode"
+                scene="https://prod.spline.design/XN2E4rd-gF33gAkb/scene.splinecode"
                 onLoad={handleLoad}
             />
         </Container>
